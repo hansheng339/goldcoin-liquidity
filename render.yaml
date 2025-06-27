@@ -1,0 +1,22 @@
+services:
+  - type: web
+    name: goldcoin-liquidity
+    env: node
+    buildCommand: npm install
+    startCommand: npm run start
+    plan: free
+    autoDeploy: true
+    envVars:
+      - key: RPC_URL
+        fromDotEnv: true
+      - key: WALLET_PATH
+        fromDotEnv: true
+      - key: GOLDCOIN_MINT
+        fromDotEnv: true
+      - key: USDC_MINT
+        fromDotEnv: true
+      - key: SWAP_FEE_SOURCE
+        fromDotEnv: true
+    schedule:
+      - cron: "0 * * * *"
+        command: npm run start
