@@ -18,6 +18,5 @@ services:
       - key: SWAP_FEE_SOURCE
         fromDotEnv: true
     schedule:
-  - cron: "0 * * * *"
-    command: npx tsx src/index.ts
-
+      - cron: "0 * * * *"
+        command: npx tsx src/index.ts
