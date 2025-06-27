@@ -3,7 +3,7 @@ services:
     name: goldcoin-liquidity
     env: node
     buildCommand: npm install
-    startCommand: npm run start
+    startCommand: npx tsx src/index.ts
     plan: free
     autoDeploy: true
     envVars:
@@ -19,4 +19,4 @@ services:
         fromDotEnv: true
     schedule:
       - cron: "0 * * * *"
-        command: npm run start
+        command: npx tsx src/index.ts
