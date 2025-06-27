@@ -1,0 +1,17 @@
+{
+  "name": "goldcoin-liquidity-bot",
+  "version": "1.0.0",
+  "main": "src/index.ts",
+  "scripts": {
+    "start": "tsx src/index.ts"
+  },
+  "dependencies": {
+    "@solana/web3.js": "^1.92.1",
+    "dotenv": "^16.3.1",
+    "node-fetch": "^3.3.2"
+  },
+  "devDependencies": {
+    "tsx": "^4.7.0",
+    "typescript": "^5.4.5"
+  }
+}
